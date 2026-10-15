@@ -1,0 +1,459 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #f5eee5;
+    color: #493326;
+}
+
+a {
+    color: #79543b;
+    text-decoration: none;
+}
+
+.navbar {
+    background: #593b2b;
+    color: #fff8ef;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    color: #fff8ef;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #fff8ef;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1150px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    margin-bottom: 8px;
+    font-size: 30px;
+}
+
+.subtitle {
+    color: #8e7968;
+    margin-bottom: 25px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.product-card {
+    background: #fffdf9;
+    border-radius: 17px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(83, 54, 35, 0.08);
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    background: #e9ded1;
+}
+
+.product-info {
+    padding: 18px;
+}
+
+.product-info h3 {
+    margin: 0 0 8px;
+}
+
+.description {
+    color: #8e7968;
+    font-size: 13px;
+    min-height: 38px;
+    line-height: 1.6;
+}
+
+.price {
+    color: #79543b;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 14px 0;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e5d8ca;
+    border-radius: 9px;
+    background: #fffdf9;
+    color: #493326;
+    font: inherit;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #c8a98b;
+}
+
+.quantity {
+    margin-bottom: 12px;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 9px;
+    padding: 12px 18px;
+    background: #593b2b;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #79543b;
+}
+
+.btn-light {
+    background: #e9ded1;
+    color: #493326;
+}
+
+.btn-danger {
+    background: #a64b3c;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.panel {
+    background: #fffdf9;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 25px rgba(83, 54, 35, 0.07);
+    margin-bottom: 20px;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+}
+
+th, td {
+    padding: 14px 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee2d6;
+}
+
+th {
+    background: #f8f1e9;
+}
+
+.total {
+    text-align: right;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.message {
+    background: #fffdf9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: #a33b2e;
+    background: #fff0ed;
+    border: 1px solid #f0c7bf;
+}
+
+.success {
+    color: #286b35;
+    background: #edf8ed;
+    border: 1px solid #bfdfbf;
+}
+
+.status {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 6px 12px;
+    background: #f4e7cf;
+    color: #79543b;
+    font-size: 13px;
+}
+
+.empty {
+    text-align: center;
+    padding: 45px 15px;
+    background: #fffdf9;
+    border-radius: 16px;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .page-title {
+        font-size: 25px;
+    }
+
+    .container {
+        margin-top: 24px;
+    }
+
+    .panel {
+        padding: 16px;
+    }
+.product-bottom form {
+    margin: 0;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+#cart-count {
+    display: inline-block;
+    background: #e8c6a4;
+    color: #493326;
+    border-radius: 20px;
+    padding: 2px 8px;
+    font-size: 12px;
+}
+
+/* ===== Light / Dark Theme ===== */
+
+:root {
+    color-scheme: light;
+    --bg-color: #f7f3ec;
+    --card-color: #ffffff;
+    --text-color: #493629;
+    --muted-color: #897969;
+    --border-color: #e7ddd1;
+    --nav-color: #ffffff;
+    --input-color: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body.dark-theme {
+    color-scheme: dark;
+    --bg-color: #171513;
+    --card-color: #24211e;
+    --text-color: #f5eee5;
+    --muted-color: #c0b2a3;
+    --border-color: #453b32;
+    --nav-color: #201c19;
+    --input-color: #302a25;
+}
+
+body,
+.navbar,
+.product-card,
+.panel,
+.stat-card,
+.section-card,
+input,
+textarea,
+select,
+table th,
+table td {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+body.dark-theme .navbar,
+body.dark-theme .product-card,
+body.dark-theme .panel,
+body.dark-theme .stat-card,
+body.dark-theme .section-card {
+    background-color: var(--card-color);
+    color: var(--text-color);
+}
+
+body.dark-theme .nav-links a,
+body.dark-theme .logo,
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme p,
+body.dark-theme .product-info,
+body.dark-theme .price {
+    color: var(--text-color);
+}
+
+body.dark-theme .muted,
+body.dark-theme .product-info p {
+    color: var(--muted-color);
+}
+
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+    background-color: var(--input-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-theme table th {
+    background-color: #302a25;
+    color: var(--text-color);
+}
+
+body.dark-theme table td {
+    border-color: var(--border-color);
+}
+
+body.dark-theme .product-card,
+body.dark-theme .panel,
+body.dark-theme .stat-card,
+body.dark-theme .section-card {
+    border-color: var(--border-color);
+}
+
+/* ปุ่มเปลี่ยนธีม */
+.theme-toggle {
+    border: 1px solid var(--border-color);
+    background: var(--card-color);
+    color: var(--text-color);
+    padding: 9px 13px;
+    border-radius: 22px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.theme-toggle:hover {
+    opacity: 0.8;
+}
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+/* ===== Moya Cafe Dark Mode Fix ===== */
+
+body.dark-theme {
+    background: #171513 !important;
+    color: #f5eee5 !important;
+}
+
+body.dark-theme .navbar,
+body.dark-theme nav {
+    background: #24211e !important;
+    color: #f5eee5 !important;
+}
+
+body.dark-theme .product-card,
+body.dark-theme .panel,
+body.dark-theme .section-card,
+body.dark-theme .stat-card,
+body.dark-theme .container,
+body.dark-theme .cart-container {
+    background: #24211e !important;
+    color: #f5eee5 !important;
+    border-color: #453b32 !important;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme p,
+body.dark-theme span,
+body.dark-theme label,
+body.dark-theme .logo,
+body.dark-theme .nav-links a,
+body.dark-theme .product-info,
+body.dark-theme .price {
+    color: #f5eee5;
+}
+
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+    background: #302a25 !important;
+    color: #ffffff !important;
+    border-color: #5a4b3e !important;
+}
+
+body.dark-theme table th,
+body.dark-theme table td {
+    background: #24211e !important;
+    color: #f5eee5 !important;
+    border-color: #453b32 !important;
+}
+
+
+
+
+
+}
